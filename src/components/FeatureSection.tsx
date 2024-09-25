@@ -51,7 +51,7 @@ const serviceItems = [
 
 export default function FeatureSection() {
     return (
-        <div className="grid place-content-center text-center bg-gradient-to-tl from-[#000] to-[#262724] px-24">
+        <div className="grid place-content-center text-center bg-gradient-to-tl from-[#000] to-[#262724] px-24 pt-20">
             <TextTag text="FEATURES" />
             <div className="px-32">
                 <Text4 text="Discover the Power of 100xBoost: Features Built for Cloud Optimization" />

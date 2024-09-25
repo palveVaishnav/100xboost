@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .innerShadow {
+    box-shadow: inset 0 8px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .textSecondary {
+    @apply text-[#ffffff30] px-40
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
