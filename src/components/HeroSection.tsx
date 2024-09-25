@@ -4,16 +4,16 @@ import TextTag from "./TextTag";
 
 export default function HeroSection() {
     return (
-        <div className="grid place-content-center mt-28 relative">
-            <Image
+        <div className="grid place-content-center relative pt-16 bg-gradient-to-tr from-[#000] to-[#262724] px-24">
+            {/* <Image
                 alt="DashBoard"
                 src={'/circles.svg'}
                 layout="fill"
                 objectFit="cover"
-                className="-z-10"
-            />
+                className="hidden"
+            /> */}
             <TextTag text="AWS on Steroids" />
-            <div className="text-[3em] font-mono grid place-content-center font-semibold">
+            <div className="text-[3.5em] font-mono grid place-content-center font-semibold">
                 <span className="grid place-content-center">
                     {"Why pay more?"}
                 </span>
@@ -34,7 +34,7 @@ export default function HeroSection() {
                 <GetStarted varient="arrow" text="Get Started" />
             </div>
 
-            <div className="bg-transparent px-28">
+            <div className="bg-transparent p-10">
                 <Image
                     alt="DashBoard"
                     src={'/Dashboard.png'}
