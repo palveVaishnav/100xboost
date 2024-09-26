@@ -37,7 +37,7 @@ export default function HeroSection() {
             <div className="bg-transparent p-10">
                 <Image
                     alt="DashBoard"
-                    src={'/Dashboard.png'}
+                    src={'https://framerusercontent.com/images/YfpxEw5tHPFWqQRWN3grTFME.jpg?scale-down-to=2048'}
                     width={100}
                     height={100}
                     className="h-full w-full overflow-hidden rounded-3xl"
