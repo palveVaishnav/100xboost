@@ -1,6 +1,6 @@
 import GetStarted from "./GetStarted";
 import TextTag from "./TextTag";
-import { Cpu, Database, Globe, Globe as Lambda, Server, HardDrive, IconNode } from "lucide-react"
+import { Cpu, Database, Globe, Globe as Lambda, Server, HardDrive } from "lucide-react"
 
 export default function Integration() {
     return (
