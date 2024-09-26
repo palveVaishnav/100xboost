@@ -3,7 +3,7 @@ import GetStarted from "./GetStarted";
 
 export default function Navigation() {
     return (
-        <div className="w-full flex justify-between overflow-hidden items-center h-full p-4 bg-black">
+        <div className="w-full flex justify-between overflow-hidden items-center h-full p-4 bg-black z-50">
             <div>
                 <Logo />
             </div>

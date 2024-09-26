@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 
 export default function FAQs() {
-    const [answer, showAnswer] = useState(6);
+    const [answer, showAnswer] = useState(0);
 
     return (
         <div className="grid place-content-center w-full p-20">
@@ -14,7 +14,7 @@ export default function FAQs() {
                 <div className="p-4 w-full" key={index}>
                     <div
                         className={`p-2 flex gap-2 items-center cursor-pointer ${answer === index ? 'text-[#ffffff30]' : ''}`}
-                        onClick={() => showAnswer(answer === index ? -1 : index)} // Toggle logic
+                        onClick={() => showAnswer(answer === index ? 0 : index)} // Toggle logic
                     >
                         {answer === index ? <Cross2Icon /> : <PlusIcon />}
                         <span>{qa.question}</span>

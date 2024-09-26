@@ -18,7 +18,7 @@ export default function WorkSection() {
 
             <div className="grid place-content-center grid-cols-2  p-32 gap-10">
 
-                <div className="grid place-content-start row-span-2 border relative p-4 gap-4 rounded-2xl h-[65vh]"
+                <div className="grid place-content-start row-span-2  relative p-4 gap-4 rounded-2xl h-[65vh] overflow-hidden"
                     style={{
                         boxShadow: "inset 2px 2px 20px 10px #191919"
                     }}
@@ -38,7 +38,7 @@ export default function WorkSection() {
                     />
                 </div>
 
-                <div className="grid row-span-1 border p-4 gap-4 rounded-2xl"
+                <div className="grid row-span-1  p-4 gap-4 rounded-2xl"
                     style={{
                         boxShadow: "inset 2px 2px 20px 20px #ffffff10"
                     }}
@@ -52,7 +52,7 @@ export default function WorkSection() {
                 </div>
 
 
-                <div className="grid row-span-1 border p-4 gap-4 rounded-2xl"
+                <div className="grid row-span-1  p-4 gap-4 rounded-2xl"
                     style={{
                         boxShadow: "inset 2px 2px 20px 10px #ffffff10"
                     }}
