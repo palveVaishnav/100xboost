@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import { AnimateView } from "@/components/AnimatevVew";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,9 +31,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="w-full fixed top-0 z-50">
-          <Navigation />
+          <AnimateView yaxis={-20} >
+            <Navigation />
+          </AnimateView>
         </div>
-        <div className="mt-20">
+        <div className="">
           {children}
         </div>
       </body>

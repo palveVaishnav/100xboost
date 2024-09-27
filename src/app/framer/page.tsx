@@ -1,3 +1,3 @@
 export default function Home() {
-    return <div>From Folder</div>
+    return <div>From framer</div>
 }

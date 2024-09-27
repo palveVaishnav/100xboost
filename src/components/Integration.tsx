@@ -1,3 +1,4 @@
+import { AnimateView } from "./AnimatevVew";
 import GetStarted from "./GetStarted";
 import TextTag from "./TextTag";
 import { Cpu, Database, Globe, Globe as Lambda, Server, HardDrive } from "lucide-react"
@@ -12,13 +13,19 @@ export default function Integration() {
                     <div className="flex justify-start">
                         <TextTag text={"integration"} />
                     </div>
-                    <div className="text-[4em] font-bold text-left">
-                        {"Empowering Your Cloud Experience with AWS"}
-                    </div>
-                    <span className="text-left text-[#ffffff30]">
-                        {"At 100xBoost, we support a range of Amazon Web Services (AWS) to deliver scalable, efficient, and cost-effective cloud solutions tailored to your needs. Discover the key AWS services we utilize to enhance your business operations."}
-                    </span>
-                    <GetStarted text={'Get Started'} varient="" />
+                    <AnimateView>
+                        <div className="text-[4em] font-bold text-left">
+                            {"Empowering Your Cloud Experience with AWS"}
+                        </div>
+                    </AnimateView>
+                    <AnimateView>
+                        <span className="text-left text-[#ffffff30]">
+                            {"At 100xBoost, we support a range of Amazon Web Services (AWS) to deliver scalable, efficient, and cost-effective cloud solutions tailored to your needs. Discover the key AWS services we utilize to enhance your business operations."}
+                        </span>
+                    </AnimateView>
+                    <AnimateView delay={0.5}>
+                        <GetStarted text={'Get Started'} varient="" />
+                    </AnimateView>
                 </div>
 
                 <div className="grid place-content-center relative flex-1">
@@ -70,7 +77,7 @@ function ServiceCard({ service }: {
     }
 }) {
     return (
-        <div className="bg-[#151516] rounded-2xl p-4">
+        <div className="bg-[#151516] rounded-2xl p-4 h-full w-full">
             <div>
                 <div className="mb-2">{service.icon}</div>
                 <div className="text-white text-lg">{service.name}</div>
@@ -84,13 +91,13 @@ function ServiceCard({ service }: {
 
 function AWSServicesGrid() {
     return (
-        <div className="">
-            <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-3 gap-6">
-                    {services.map((service, index) => (
-                        <ServiceCard key={index} service={service} />
-                    ))}
-                </div>
+        <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-3 gap-6">
+                {services.map((service, index) => (
+                    <AnimateView key={index} delay={index * 0.3} yaxis={20}>
+                        <ServiceCard service={service} />
+                    </AnimateView>
+                ))}
             </div>
         </div>
     )

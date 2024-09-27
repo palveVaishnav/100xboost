@@ -2,6 +2,7 @@ import Image from "next/image";
 import GetStarted from "./GetStarted";
 import Text4 from "./Text4";
 import TextTag from "./TextTag";
+import { AnimateView } from "./AnimatevVew";
 
 export default function Benifits() {
     return (
@@ -9,43 +10,51 @@ export default function Benifits() {
             <TextTag text="benifits" />
             <Text4 text="Instant Cost Savings" />
             <span className="textSecondary">
-                {"By analyzing your current cloud usage, 100xBoost identifies areas where you’re overpaying and suggests optimizations to save you money without compromising on performance."}
+                <AnimateView yaxis={20} customduration={1.5}>
+                    <p>By analyzing your current cloud usage, 100xBoost identifies areas where you`re overpaying and suggests optimizations to save you money without compromising on performance.</p>
+                </AnimateView>
             </span>
-            <div className="grid w-full p-20 gap-10">
-                {featureItems.map((feature, index) => (
-                    <div
-                        className={`
+            <AnimateView opacity={0.5} yaxis={20} >
+                <div className="grid w-full p-20 gap-10">
+                    {featureItems.map((feature, index) => (
+                        <AnimateView opacity={0} yaxis={20} key={index} >
+                            <div
+                                className={`
                                 flex w-full p-20 rounded-2xl gap-8
                                 ${index % 2 !== 0 ? 'flex-row-reverse' : ''} 
                                 bg-gradient-to-tl from-[#000] to-[#ffffff10]        
                         `}
-                        key={index}
-                    >
-                        <div className="grid place-content-center gap-2 flex-1 ">
-                            <div className="flex justify-start">
-                                <TextTag text={feature.tag} />
-                            </div>
-                            <div className="text-[4em] font-bold text-left">
-                                {feature.title}
-                            </div>
-                            <span className="text-left text-[#ffffff30]">
-                                {feature.desc}
-                            </span>
-                            <GetStarted text={'Get Started'} varient="" />
-                        </div>
 
-                        <div className="grid place-content-center relative flex-1">
-                            <Image
-                                src={feature.image}
-                                alt="Benifit Image"
-                                width={500}
-                                height={10}
-                                className="w-full h-full"
-                            />
-                        </div>
-                    </div>
-                ))}
-            </div>
+                            >
+                                <div className="grid place-content-center gap-2 flex-1 ">
+                                    <div className="flex justify-start">
+                                        <TextTag text={feature.tag} />
+                                    </div>
+                                    <div className="text-[4em] font-bold text-left">
+                                        {feature.title}
+                                    </div>
+                                    <span className="text-left text-[#ffffff30]">
+                                        {feature.desc}
+                                    </span>
+                                    <GetStarted text={'Get Started'} varient="" />
+                                </div>
+
+                                <div className="grid place-content-center relative flex-1">
+                                    <AnimateView delay={0.2}>
+                                        <Image
+                                            src={feature.image}
+                                            alt="Benifit Image"
+                                            width={500}
+                                            height={10}
+                                            className="w-full h-full"
+                                        />
+                                    </AnimateView>
+                                </div>
+                            </div>
+                        </AnimateView>
+                    ))}
+                </div>
+            </AnimateView>
         </div>
     )
 }
