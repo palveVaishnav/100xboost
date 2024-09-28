@@ -1,7 +1,9 @@
+"use client"
 import GetStarted from "./GetStarted";
 import Image from "next/image";
 import TextTag from "./TextTag";
 import { AnimateView } from './AnimatevVew';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
     return (
@@ -38,15 +40,22 @@ export default function HeroSection() {
             </AnimateView>
 
             <div className="bg-transparent p-10">
-                <AnimateView yaxis={-50} customduration={1} scale={0.9}>
+                <motion.div
+                    initial={{ opacity: .5, y: 0, rotateX: 30, rotateY: 0, rotateZ: 0, offset: 0, }}
+                    animate={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0, rotateZ: 0, offset: 30 }}
+                    transition={{
+                        type: 'spring',    // Use spring transition for the effect
+                        duration: 2,
+                    }}
+                >
                     <Image
                         alt="DashBoard"
                         src={'/Dashboard.png'}
                         width={100}
                         height={100}
-                        className="h-full w-full overflow-hidden rounded-3xl"
+                        className="h-full w-full rounded-3xl"
                     />
-                </AnimateView>
+                </motion.div>
             </div>
 
         </div >
