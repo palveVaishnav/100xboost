@@ -45,7 +45,7 @@ export default function HeroSection() {
                 <AnimateView xRotate={20} customduration={2} delay={1}>
                     <Image
                         alt="DashBoard"
-                        src={'https://framerusercontent.com/images/YfpxEw5tHPFWqQRWN3grTFME.jpg?scale-down-to=2048'}
+                        src={'https://framerusercontent.com/images/YfpxEw5tHPFWqQRWN3grTFME.jpg'}
                         width={100}
                         height={100}
                         className="h-full w-full rounded-3xl"
