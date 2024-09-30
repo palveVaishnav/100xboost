@@ -31,9 +31,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="w-full fixed top-0 z-50">
-          {/* <AnimateView yaxis={-20} >
+          <AnimateView yaxis={-20} >
             <Navigation />
-          </AnimateView> */}
+          </AnimateView>
         </div>
         <div className="">
           {children}

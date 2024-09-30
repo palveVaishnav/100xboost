@@ -1,9 +1,7 @@
-"use client"
 import GetStarted from "./GetStarted";
 import Image from "next/image";
 import TextTag from "./TextTag";
 import { AnimateView } from './AnimatevVew';
-import { motion } from 'framer-motion';
 
 export default function HeroSection() {
     return (
@@ -39,23 +37,23 @@ export default function HeroSection() {
                 </div>
             </AnimateView>
 
-            <div className="bg-transparent p-10">
-                <motion.div
-                    initial={{ opacity: .5, y: 0, rotateX: 30, rotateY: 0, rotateZ: 0, offset: 0, }}
-                    animate={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0, rotateZ: 0, offset: 30 }}
-                    transition={{
-                        type: 'spring',    // Use spring transition for the effect
-                        duration: 2,
-                    }}
-                >
+            <div className="bg-transparent p-10"
+                style={{
+                    perspective: 1200,
+                }}
+            >
+                <AnimateView xRotate={20} customduration={2} delay={1}>
                     <Image
                         alt="DashBoard"
-                        src={'/Dashboard.png'}
+                        src={'https://framerusercontent.com/images/YfpxEw5tHPFWqQRWN3grTFME.jpg?scale-down-to=2048'}
                         width={100}
                         height={100}
                         className="h-full w-full rounded-3xl"
+                        style={{
+                            transformStyle: "preserve-3d",
+                        }}
                     />
-                </motion.div>
+                </AnimateView>
             </div>
 
         </div >

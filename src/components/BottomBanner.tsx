@@ -12,14 +12,21 @@ export default function BottomBanner() {
                 <div className="flex p-4 justify-center">
                     <GetStarted text="Get Started" varient="arrow" />
                 </div>
-                <div className="px-24 mt-20">
-                    <AnimateView delay={-0.1} yaxis={90} yRotate={20} scale={0.9}>
+                <div className="px-24 mt-20"
+                    style={{
+                        perspective: 1200,
+                    }}
+                >
+                    <AnimateView xRotate={30} delay={0.3} opacity={1}>
                         <Image
                             alt="DashBoard"
-                            src={'/DashBoard.png'}
+                            src={'https://framerusercontent.com/images/YfpxEw5tHPFWqQRWN3grTFME.jpg?scale-down-to=2048'}
                             width={100}
                             height={100}
                             className="h-full w-full overflow-hidden rounded-3xl"
+                            style={{
+                                transformStyle: "preserve-3d",
+                            }}
                         />
                     </AnimateView>
                 </div>
